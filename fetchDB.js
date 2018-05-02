@@ -34,6 +34,7 @@ function decryptData(item) {
     var parsedHL7Array = CryptoJS.enc.Base64.parse(item.EncryptedHL7);
     var HL7 = parsedHL7Array.toString(CryptoJS.enc.Utf8);
     var medicalReport = str2json.convert(item.DecryptedHL7JSONData).MedicalReport;
+    document.Id = item.Id;
     document.Code = item.Code;
     document.CompanyCode = item.CompanyCode;
     document.ParentCode = item.ParentCode;
